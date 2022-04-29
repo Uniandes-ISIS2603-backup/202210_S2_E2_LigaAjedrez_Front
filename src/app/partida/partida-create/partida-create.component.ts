@@ -92,7 +92,6 @@ export class PartidaCreateComponent implements OnInit {
       id: ['', [Validators.required, Validators.minLength(2)]],
       torneo: ['', [Validators.required]],
       apertura: ['', [Validators.required]],
-      description: ['', [Validators.required]],
       resultado: ['', [Validators.required]],
       jugada: ['', [Validators.required]],
       jugador: ['', [Validators.required]],
