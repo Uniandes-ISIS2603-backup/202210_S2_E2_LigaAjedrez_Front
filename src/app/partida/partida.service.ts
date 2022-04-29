@@ -19,4 +19,15 @@ export class PartidaService {
   getPartida(id: string): Observable<PartidaDetail> {
     return this.http.get<PartidaDetail>(this.apiUrl + '/' + id);
   }
+
+  createPartida(partida: PartidaDetail): Observable<PartidaDetail> {
+    return this.http.post<PartidaDetail>(this.apiUrl, partida);
+  }
+
+  createTorneoPartida(id: number, torneoId: number) {
+    return this.http.post(
+      this.apiUrl + '/' + id + '/torneos/' + torneoId,
+      undefined
+    );
+  }
 }
