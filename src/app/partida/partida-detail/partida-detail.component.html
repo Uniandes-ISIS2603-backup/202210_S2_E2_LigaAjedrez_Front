@@ -1,32 +1,19 @@
-<h1>Detalle de la Partidas</h1>
+<h4>Detalle de la Partidas</h4>
 <div class="container">
   <div class="row">
-      <div class="col">
-          <table class="table">
-              <caption></caption>
-              <thead>
-                 <tr>
-                    <th scope="col" width="10px"><b>#</b></th>
-                    <th scope="col">Torneo</th>
-                    <th scope="col">Apertura Realizada</th>
-                    <th scope="col">Resultado</th>
-                 </tr>
-              </thead>
-              <tbody>
-                  <td>
-                    <dd>{{partidaDetail.id}}</dd>
-                  </td>
-                  <td>
-                    <dd>{{partidaDetail.torneo.nombre}}</dd>
-                  </td>
-                  <td>
-                    <dd>{{partidaDetail.aperturaRealizada.nombre}}</dd>
-                  </td>
-                  <td>
-                    <dd>{{partidaDetail.resultado}}</dd>
-                  </td>
-              </tbody>
-          </table>
-      </div>
+    <div class="col">
+      <tr><b>#</b></tr>
+      <tr><b>Liga:</b></tr>
+      <tr><b>Torneo:</b></tr>
+      <tr><b>Apertura Realizada:</b></tr>
+      <tr><b>Resultado:</b></tr>
+    </div>
+    <div class="col">
+      <tr>{{partidaDetail.id}}</tr>
+      <tr>{{partidaDetail.torneo.liga.nombre}}</tr>
+      <tr>{{partidaDetail.torneo.nombre}}</tr>
+      <tr>{{partidaDetail.aperturaRealizada.nombre}}</tr>
+      <tr>{{partidaDetail.resultado}}</tr>
+    </div>
   </div>
 </div>
