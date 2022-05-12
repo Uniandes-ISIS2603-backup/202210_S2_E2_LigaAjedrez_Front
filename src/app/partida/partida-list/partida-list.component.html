@@ -1,3 +1,29 @@
-<p>
-  partida-list works!
-</p>
+<h1>Listado Partidas</h1>
+<body>
+  <table class="container-fluid">
+    <thead>
+      <tr>
+        <th class="h4">id</th>
+        <th class="h4">torneo</th>
+        <th class="h4">aperturaRealizada</th>
+        <th class="h4">resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of getPartidasList()">
+        <td>
+          <dd>{{a.id}}</dd>
+        </td>
+        <td>
+          <dd>{{a.torneo}}</dd>
+        </td>
+        <td>
+          <dd>{{a.aperturaRealizada}}</dd>
+        </td>
+        <td>
+          <dd>{{a.resultado}}</dd>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</body>

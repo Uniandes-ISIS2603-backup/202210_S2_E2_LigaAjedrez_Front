@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { dataPartida } from '../dataPartida';
+import { Partida } from '../partida';
 
 @Component({
   selector: 'app-partida-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidaListComponent implements OnInit {
 
+  partidas: Array<Partida> = [];
   constructor() { }
 
-  ngOnInit() {
+  getPartidasList(): Array<Partida>{
+    return dataPartida
   }
-
+  ngOnInit() {
+    this.partidas = this.getPartidasList();
+  }
 }
