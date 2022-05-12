@@ -12,7 +12,7 @@ export class AperturaListComponent implements OnInit {
   aperturas: Array<Apertura> = [];
   constructor() { }
   getAperturasList(): Array<Apertura>{
-    return dataAperturas
+    return dataAperturas;
   }
   ngOnInit() {
     this.aperturas = this.getAperturasList();
