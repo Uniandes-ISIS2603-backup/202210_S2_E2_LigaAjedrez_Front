@@ -10,6 +10,8 @@ import { JugadorModule } from './jugador/jugador.module';
 import { JugadaModule } from './jugada/jugada.module';
 import { ComentarioModule } from './comentario/comentario.module';
 import { LigaModule } from './liga/liga.module';
+import { TorneoModule } from './torneo/torneo.module';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { LigaModule } from './liga/liga.module';
     PartidaModule,
     JugadorModule,
     AperturaModule,
+    TorneoModule,
     JugadaModule,
     ComentarioModule,
     LigaModule,
