@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidaModule } from './partida/partida.module';
+import { AperturaModule } from './apertura/apertura.module';
 
 @NgModule({
   declarations: [
