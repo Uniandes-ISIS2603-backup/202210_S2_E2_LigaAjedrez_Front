@@ -5,15 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidaModule } from './partida/partida.module';
+<<<<<<< Updated upstream
 import { AperturaModule } from './apertura/apertura.module';
 import { JugadorModule } from './jugador/jugador.module';
 import { JugadaModule } from './jugada/jugada.module';
 
+=======
+import { LigaComponent } from './liga/liga.component';
+>>>>>>> Stashed changes
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [	
+    AppComponent,
+      LigaComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
