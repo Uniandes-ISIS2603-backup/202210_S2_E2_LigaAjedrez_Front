@@ -1,3 +1,5 @@
+import { Apertura } from "../apertura/apertura";
+
 export class Partida {
   id: number;
   torneo: Torneo;

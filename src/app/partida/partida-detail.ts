@@ -1,4 +1,5 @@
 import { Jugada } from "../jugada/jugada";
+import { Jugador } from "../jugador/jugador";
 import { Partida } from "./partida";
 
 export class PartidaDetail extends Partida {
