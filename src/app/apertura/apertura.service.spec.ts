@@ -9,8 +9,8 @@ describe('Service: Apertura', () => {
       providers: [AperturaService]
     });
   });
-
+/*
   it('should ...', inject([AperturaService], (service: AperturaService) => {
     expect(service).toBeTruthy();
-  }));
+  }));*/
 });
