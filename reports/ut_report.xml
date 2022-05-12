@@ -1,23 +1,24 @@
 <testExecutions version="1">
-  <file path="src/app/apertura/apertura-list/apertura-list.component.spec.ts">
-    <testCase name="AperturaListComponent should create" duration="65"/>
-  </file>
-  <file path="src/app/partida/partida-list/partida-list.component.spec.ts">
-    <testCase name="PartidaListComponent should create" duration="27"/>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'LigaAjedrez'" duration="36"/>
+    <testCase name="AppComponent should create the app" duration="9"/>
   </file>
   <file path="src/app/comentario/comentario-jugada-list/comentario-jugada-list.component.spec.ts">
-    <testCase name="ComentarioJugadaListComponent should create" duration="23"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="10"/>
+    <testCase name="ComentarioJugadaListComponent should create" duration="80"/>
   </file>
   <file path="src/app/comentario/comentario-partida-list/comentario-partida-list.component.spec.ts">
-    <testCase name="ComentarioPartidaListComponent should create" duration="21"/>
+    <testCase name="ComentarioPartidaListComponent should create" duration="30"/>
   </file>
   <file path="src/app/liga/liga-list/liga-list.component.spec.ts">
-    <testCase name="LigaListComponent should create" duration="18"/>
+    <testCase name="LigaListComponent should create" duration="38"/>
+  </file>
+  <file path="src/app/partida/partida-list/partida-list.component.spec.ts">
+    <testCase name="PartidaListComponent should create" duration="31"/>
   </file>
   <file path="src/app/torneo/torneo-list/torneo-list.component.spec.ts">
-    <testCase name="TorneoListComponent should create" duration="20"/>
+    <testCase name="TorneoListComponent should create" duration="31"/>
+  </file>
+  <file path="src/app/apertura/apertura-list/apertura-list.component.spec.ts">
+    <testCase name="AperturaListComponent should create" duration="23"/>
   </file>
 </testExecutions>

@@ -16,6 +16,7 @@ export class JugadaListComponent implements OnInit {
   private jugadasC: Array<Jugada>=[];
 
   ngOnInit() {
+    //this.getJugadasServicio();
   }
 
   selectedJugada!: Jugada;
