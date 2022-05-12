@@ -1,3 +1,33 @@
-<p>
-  comentario-partida-detail works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <p class="h6 p-6">Detalle Comentario</p>
+    </div>
+    <hr />
+    <div class="col-4">
+      <dl>
+        <dt>{{ comentarioPartidaDetail.autor }}</dt>
+        <dd>{{ comentarioPartidaDetail.valoracionCualitativa }}</dd>
+      </dl>
+    </div>
+    <div class="col-2">
+      <dl>
+        <dt>Puntaje</dt>
+        <dd>{{ comentarioPartidaDetail.valoracionCuantitativa }}</dd>
+      </dl>
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>Fecha Publicacion</dt>
+        <dd>{{ comentarioPartidaDetail.fechaPublicacion }}</dd>
+      </dl>
+    </div>
+    <div class="col-2">
+      <dl>
+        <dt>id</dt>
+        <dd>{{ comentarioPartidaDetail.id }}</dd>
+      </dl>
+    </div>
+    <hr />
+  </div>
+</div>

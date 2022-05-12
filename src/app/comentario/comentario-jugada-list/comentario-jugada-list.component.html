@@ -1,4 +1,8 @@
-<h2>Listado comentario jugada</h2>
+<h2>Listado comentario Jugada</h2>
+<div *ngIf="selected">
+  <app-comentario-jugada-detail [comentarioJugadaDetail]="selectedComentarioJugada"></app-comentario-jugada-detail>
+ </div>
+
 <div class="container">
   <div class="row">
       <div class="col">
@@ -9,13 +13,11 @@
                     <th scope="col" width="10px"><b>#</b></th>
                     <th scope="col">Autor</th>
                     <th scope="col">val Numerica</th>
-                    <th scope="col">val Cualitativa</th>
-                    <th scope="col">fecha Publicacion</th>
                  </tr>
               </thead>
               <tbody>
 
-              <tr *ngFor="let comment of getComentarioJugadaData()">
+              <tr *ngFor="let comment of getComentarioJugadaData()" (click)="onSelected(comment)">
                 <td>
                   <dd>{{comment.id}}</dd>
                 </td>
@@ -25,16 +27,9 @@
                   <td>
                     <dd>{{comment.valoracionCuantitativa}}</dd>
                   </td>
-                  <td>
-                    <dd>{{comment.valoracionCualitativa}}</dd>
-                  </td>
-                  <td>
-                    <dd>{{comment.fechaPublicacion}}</dd>
-                  </td>
               </tr>
               </tbody>
           </table>
       </div>
-
   </div>
 </div>

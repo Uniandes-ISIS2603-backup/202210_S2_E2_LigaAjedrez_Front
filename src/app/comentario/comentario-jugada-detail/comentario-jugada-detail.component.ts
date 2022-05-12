@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ComentarioJugadaDetail } from '../comentario-jugada-detail';
 
 @Component({
   selector: 'app-comentario-jugada-detail',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comentario-jugada-detail.component.css']
 })
 export class ComentarioJugadaDetailComponent implements OnInit {
+
+  @Input() comentarioJugadaDetail!: ComentarioJugadaDetail;
+
 
   constructor() { }
 

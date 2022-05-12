@@ -1,2 +1,33 @@
-<h2>Listado comentario partida</h2>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <p class="h6 p-6">Detalle Comentario</p>
+    </div>
+    <hr />
+    <div class="col-4">
+      <dl>
+        <dt>{{ comentarioJugadaDetail.autor }}</dt>
+        <dd>{{ comentarioJugadaDetail.valoracionCualitativa }}</dd>
+      </dl>
+    </div>
+    <div class="col-2">
+      <dl>
+        <dt>Puntaje</dt>
+        <dd>{{ comentarioJugadaDetail.valoracionCuantitativa }}</dd>
+      </dl>
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>Fecha Publicacion</dt>
+        <dd>{{ comentarioJugadaDetail.fechaPublicacion }}</dd>
+      </dl>
+    </div>
+    <div class="col-2">
+      <dl>
+        <dt>id</dt>
+        <dd>{{ comentarioJugadaDetail.id }}</dd>
+      </dl>
+    </div>
+    <hr />
+  </div>
+</div>

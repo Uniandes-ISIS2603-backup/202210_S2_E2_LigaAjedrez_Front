@@ -12,6 +12,14 @@ export class ComentarioJugadaListComponent implements OnInit {
 
   private comentarioJugada: Array<ComentarioJugadaDetail>=[];
 
+  selectedComentarioJugada!: ComentarioJugadaDetail;
+  selected: Boolean = false;
+
+  onSelected(comentarioJugada: ComentarioJugadaDetail): void {
+    this.selected = true;
+    this.selectedComentarioJugada = comentarioJugada;
+  }
+
   constructor() { }
 
   ngOnInit() {
