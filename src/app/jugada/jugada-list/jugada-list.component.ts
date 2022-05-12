@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { dataJugadas } from '../dataJugadas';
 import { Jugada } from '../jugada';
 import { JugadaService } from '../jugada.service';
-//import { dataJugadas } from '../dataJugadas';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class JugadaListComponent implements OnInit {
 
   getJugadasData(): Array<Jugada> {
     //return dataJugadas;
-    return new Array<Jugada>();
+    return dataJugadas;
   }
 
 

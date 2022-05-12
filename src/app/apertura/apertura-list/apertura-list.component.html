@@ -1,29 +1,34 @@
-<h1>Listado aperturas</h1>
-<body>
-  <table class="container-fluid">
-    <thead>
-      <tr>
-        <th class="h4">id</th>
-        <th class="h4">nombre</th>
-        <th class="h4">clasificacion</th>
-        <th class="h4">movimientos</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let a of getAperturasList()">
-        <td>
-          <dd>{{a.id}}</dd>
-        </td>
-        <td>
-          <dd>{{a.nombre}}</dd>
-        </td>
-        <td>
-          <dd>{{a.clasificacion}}</dd>
-        </td>
-        <td>
-          <dd>{{a.movimientos}}</dd>
-        </td>
-    </tr>
-    </tbody>
-  </table>
-</body>
+<h1>Listado Aperturas</h1>
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" width="10px"><b>#</b></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Clasificacion</th>
+              <th scope="col">Movimientos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of getAperturasList()">
+              <td>
+                <dd>{{a.id}}</dd>
+              </td>
+              <td>
+                <dd>{{a.nombre}}</dd>
+              </td>
+              <td>
+                <dd>{{a.clasificacion}}</dd>
+              </td>
+              <td>
+                <dd>{{a.movimientos}}</dd>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+  </div>
+</div>
