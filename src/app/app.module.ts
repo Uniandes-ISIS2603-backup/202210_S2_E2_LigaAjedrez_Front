@@ -8,23 +8,22 @@ import { PartidaModule } from './partida/partida.module';
 import { AperturaModule } from './apertura/apertura.module';
 import { JugadorModule } from './jugador/jugador.module';
 import { JugadaModule } from './jugada/jugada.module';
-
-import { LigaComponent } from './liga/liga.component';
 import { ComentarioModule } from './comentario/comentario.module';
+import { LigaModule } from './liga/liga.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-      LigaComponent
+    AppComponent
    ],
-  imports: [
+   imports: [
     BrowserModule,
     AppRoutingModule,
     PartidaModule,
     JugadorModule,
     AperturaModule,
     JugadaModule,
-    ComentarioModule
+    ComentarioModule,
+    LigaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
