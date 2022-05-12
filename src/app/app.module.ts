@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidaModule } from './partida/partida.module';
 import { AperturaModule } from './apertura/apertura.module';
+import { JugadorModule } from './jugador/jugador.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { AperturaModule } from './apertura/apertura.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PartidaModule
+    PartidaModule,
+    JugadorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
