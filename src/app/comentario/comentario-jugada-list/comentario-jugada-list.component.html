@@ -7,15 +7,18 @@
               <thead>
                  <tr>
                     <th scope="col" width="10px"><b>#</b></th>
-                    <th scope="col">Numero</th>
-                    <th scope="col">Movimiento</th>
-                    <th scope="col">Jugador</th>
-                    <th scope="col">Partida</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">val Numerica</th>
+                    <th scope="col">val Cualitativa</th>
+                    <th scope="col">fecha Publicacion</th>
                  </tr>
               </thead>
               <tbody>
 
-                <tr *ngFor="let comment of getComentarioJugadaData()">
+              <tr *ngFor="let comment of getComentarioJugadaData()">
+                <td>
+                  <dd>{{comment.id}}</dd>
+                </td>
                   <td>
                     <dd>{{comment.autor}}</dd>
                   </td>

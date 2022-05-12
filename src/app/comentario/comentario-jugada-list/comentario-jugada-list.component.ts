@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComentarioJugadaDetail } from '../comentario-jugada-detail';
+import { dataComentarioJugada } from '../dataComentarioJugada';
 
 
 @Component({
@@ -14,12 +15,11 @@ export class ComentarioJugadaListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.comentarioJugada = this.getComentarioJugadaData();
+    this.comentarioJugada = this.getComentarioJugadaData()
   }
 
   getComentarioJugadaData(): Array<ComentarioJugadaDetail> {
-    //return dataComentarioJugada;
-    return new Array<ComentarioJugadaDetail>();
+    return dataComentarioJugada;
   }
 
 }
