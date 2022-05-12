@@ -1,3 +1,37 @@
-<p>
-  comentario-jugada-list works!
-</p>
+<h2>Listado comentario jugada</h2>
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <table class="table">
+              <caption></caption>
+              <thead>
+                 <tr>
+                    <th scope="col" width="10px"><b>#</b></th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Movimiento</th>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Partida</th>
+                 </tr>
+              </thead>
+              <tbody>
+
+                <tr *ngFor="let comment of getComentarioJugadaData()">
+                  <td>
+                    <dd>{{comment.autor}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{comment.valoracionCuantitativa}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{comment.valoracionCualitativa}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{comment.fechaPublicacion}}</dd>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
+</div>

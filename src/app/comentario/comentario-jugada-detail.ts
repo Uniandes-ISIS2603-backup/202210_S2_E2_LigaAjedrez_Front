@@ -1,7 +1,6 @@
-import { JugadaDetail } from "../jugada/jugada-detail";
 import { Comentario } from "./comentario";
 
-export class ComentarioPartidaDetail extends Comentario{
+export class ComentarioJugadaDetail extends Comentario{
 
   constructor(
     id: number,
