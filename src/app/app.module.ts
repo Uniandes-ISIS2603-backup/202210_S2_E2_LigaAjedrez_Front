@@ -23,7 +23,8 @@ import { LigaModule } from './liga/liga.module';
     AperturaModule,
     JugadaModule,
     ComentarioModule,
-    LigaModule
+    LigaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

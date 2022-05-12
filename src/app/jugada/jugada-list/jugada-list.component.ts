@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Jugada } from '../jugada';
+import { JugadaService } from '../jugada.service';
+//import { dataJugadas } from '../dataJugadas';
+
 
 @Component({
   selector: 'app-jugada-list',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JugadaListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private jugadaService: JugadaService) { }
+
+  private jugadasC: Array<Jugada>=[];
 
   ngOnInit() {
+  }
+
+
+  getJugadasData(): Array<Jugada> {
+    //return dataJugadas;
+    return new Array<Jugada>();
+  }
+
+
+  getJugadasServicio()
+  {
+    this.jugadaService.getJugadas().subscribe(
+      jugadas => {this.jugadasC = jugadas;}
+      );
   }
 
 }

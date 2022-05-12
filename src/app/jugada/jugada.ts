@@ -1,10 +1,11 @@
+import { Jugador } from "../jugador/jugador";
 import { Partida } from "../partida/partida";
 
 export class Jugada {
   id: number;
   numeroJugada: number;
   movimiento: string;
-  jugador: Jugador
+  jugador: Jugador;
   partida: Partida
 
 

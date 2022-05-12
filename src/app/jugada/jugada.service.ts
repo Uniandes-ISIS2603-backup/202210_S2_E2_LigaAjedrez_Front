@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Jugada } from './jugada';
 import { JugadaDetail } from './jugada-detail';
 
 @Injectable({
@@ -13,6 +14,9 @@ export class JugadaService {
 
   constructor(private http: HttpClient) { }
 
-
+  getJugadas(): Observable<Jugada[]>
+  {
+    return this.http.get<Jugada[]>(this.apiUrl);
+  }
 
 }
