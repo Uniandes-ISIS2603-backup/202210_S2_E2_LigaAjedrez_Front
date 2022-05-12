@@ -2,14 +2,14 @@ export class Liga {
   nombre: string;
   ciudad: string;
   direccion: string;
-  telefono: string;
+  telefono: number;
   enlaceRedesSociales: string;
 
   constructor(
     nombre: string,
     ciudad: string,
     direccion: string,
-    telefono: string,
+    telefono: number,
     enlaceRedesSociales: string
     ) {
       this.nombre = nombre;

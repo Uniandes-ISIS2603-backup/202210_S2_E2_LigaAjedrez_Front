@@ -1,3 +1,41 @@
-<p>
-  torneo-list works!
-</p>
+<h1>Listado Torneos</h1>
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <table class="table">
+              <caption></caption>
+              <thead>
+                 <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Fecha Inicio</th>
+                    <th scope="col">Premio</th>
+                    <th scope="col">Liga</th>
+                 </tr>
+              </thead>
+              <tbody>
+
+                <tr *ngFor="let t of getTorneosList()">
+                  <td>
+                    <dd>{{t.nombre}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{t.lugar}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{t.fechaInicio}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{t.premio}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{t.liga}}</dd>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
+</div>
+
