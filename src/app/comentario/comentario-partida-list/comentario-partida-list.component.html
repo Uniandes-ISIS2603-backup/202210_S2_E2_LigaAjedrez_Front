@@ -1,3 +1,35 @@
-<p>
-  comentario-partida-list works!
-</p>
+<h2>Listado comentario Partida</h2>
+<div *ngIf="selected">
+  <app-comentario-partida-detail [comentarioPartidaDetail]="selectedComentarioPartida"></app-comentario-partida-detail>
+ </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <table class="table">
+              <caption></caption>
+              <thead>
+                 <tr>
+                    <th scope="col" width="10px"><b>#</b></th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">val Numerica</th>
+                 </tr>
+              </thead>
+              <tbody>
+
+              <tr *ngFor="let comment of getComentarioPartidaData()" (click)="onSelected(comment)">
+                <td>
+                  <dd>{{comment.id}}</dd>
+                </td>
+                  <td>
+                    <dd>{{comment.autor}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{comment.valoracionCuantitativa}}</dd>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

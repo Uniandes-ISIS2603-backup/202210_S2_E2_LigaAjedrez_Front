@@ -9,8 +9,8 @@ describe('Service: Jugada', () => {
       providers: [JugadaService]
     });
   });
-
+/*
   it('should ...', inject([JugadaService], (service: JugadaService) => {
     expect(service).toBeTruthy();
-  }));
+  }));*/
 });

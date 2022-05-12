@@ -1,3 +1,35 @@
-<p>
-  jugador-detail works!
-</p>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <p class="h6 p-6">Detalle Jugadores</p>
+      </div>
+      <hr />
+      <div class="col-4">
+        <dl>
+          <dt>{{ jugadorDetail.nombre }}</dt>
+          <dd>{{ jugadorDetail.nombre }}</dd>
+        </dl>
+      </div>
+      <div class="col-2">
+        <dl>
+          <dt>FechaNacimiento</dt>
+          <dd>{{ jugadorDetail.fechaNacimiento }}</dd>
+        </dl>
+      </div>
+      <div class="col-4">
+        <dl>
+          <dt>Lugar Nacimiento</dt>
+          <dd>{{ jugadorDetail.lugarNacimiento }}</dd>
+        </dl>
+      </div>
+      <div class="col-2">
+        <dl>
+          <dt>Puntaje Elo</dt>
+          <dd>{{ jugadorDetail.puntajeElo }}</dd>
+        </dl>
+      </div>
+      <hr />
+    </div>
+  </div>
+

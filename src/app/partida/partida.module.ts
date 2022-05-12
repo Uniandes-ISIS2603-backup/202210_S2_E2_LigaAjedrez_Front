@@ -5,11 +5,10 @@ import { PartidaListComponent } from './partida-list/partida-list.component';
 import { PartidaRoutingModule } from './partida-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { PartidaCreateComponent } from './partida-create/partida-create.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, PartidaRoutingModule, ReactiveFormsModule],
   exports: [PartidaListComponent],
-  declarations: [PartidaListComponent, PartidaDetailComponent, PartidaCreateComponent]
+  declarations: [PartidaListComponent, PartidaDetailComponent]
 })
 export class PartidaModule { }

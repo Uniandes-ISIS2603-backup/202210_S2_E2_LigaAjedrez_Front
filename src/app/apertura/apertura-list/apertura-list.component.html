@@ -1,3 +1,37 @@
-<p>
-  apertura-list works!
-</p>
+<h1>Listado Aperturas</h1>
+<div *ngIf="selected">
+  <app-apertura-detail [aperturaDetail]="selectedApertura"></app-apertura-detail>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" width="10px"><b>#</b></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Clasificacion</th>
+              <th scope="col">Movimientos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of getAperturasList()" (click)="onSelected(a)">
+              <td>
+                <dd>{{a.id}}</dd>
+              </td>
+              <td>
+                <dd>{{a.nombre}}</dd>
+              </td>
+              <td>
+                <dd>{{a.clasificacion}}</dd>
+              </td>
+              <td>
+                <dd>{{a.movimientos}}</dd>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+  </div>
+</div>

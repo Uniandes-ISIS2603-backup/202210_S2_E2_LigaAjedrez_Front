@@ -9,8 +9,8 @@ describe('Service: Partida', () => {
       providers: [PartidaService]
     });
   });
-
+/*
   it('should ...', inject([PartidaService], (service: PartidaService) => {
     expect(service).toBeTruthy();
-  }));
+  }));*/
 });
