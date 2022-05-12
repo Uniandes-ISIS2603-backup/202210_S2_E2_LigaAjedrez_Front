@@ -1,3 +1,33 @@
-<p>
-  jugada-detail works!
-</p>
+<h3>Detalles de la jugada</h3>
+<div class="container-fluid">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" width="10px"><b>Numero</b></th>
+          <th scope="col">Movimiento</th>
+          <th scope="col">Jugador</th>
+          <th scope="col">Partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <dd>{{jugadaDetail.numeroJugada}}</dd>
+          </td>
+          <td>
+            <dd>{{jugadaDetail.movimiento}}</dd>
+          </td>
+          <td>
+            <dd>{{jugadaDetail.jugador.nombre}}</dd>
+          </td>
+          <td>
+            <dd>{{jugadaDetail.partida.id}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

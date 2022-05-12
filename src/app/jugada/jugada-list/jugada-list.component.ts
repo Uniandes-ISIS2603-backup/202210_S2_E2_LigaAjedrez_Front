@@ -18,6 +18,14 @@ export class JugadaListComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectedJugada!: Jugada;
+  selected = false;
+
+  onSelected(jugada: Jugada): void{
+    this.selected = true;
+    this.selectedJugada = jugada;
+  }
+
 
   getJugadasData(): Array<Jugada> {
     //return dataJugadas;

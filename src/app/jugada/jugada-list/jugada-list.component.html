@@ -1,4 +1,7 @@
-
+<h2>Listado Jugadas</h2>
+<div *ngIf="selected">
+  <app-jugada-detail [jugadaDetail]="selectedJugada"></app-jugada-detail>
+</div>
 <div class="container">
   <div class="row">
       <div class="col">
@@ -14,7 +17,7 @@
               </thead>
               <tbody>
 
-                <tr *ngFor="let j of getJugadasData()">
+                <tr *ngFor="let j of getJugadasData()"  (click)="onSelected(j)">
                   <td>
                     <dd>{{j.numeroJugada}}</dd>
                   </td>
