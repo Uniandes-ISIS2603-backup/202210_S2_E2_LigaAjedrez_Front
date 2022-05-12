@@ -1,4 +1,3 @@
-import * as internal from "stream";
 import { Partida } from "../partida/partida";
 
 export class Jugador {
