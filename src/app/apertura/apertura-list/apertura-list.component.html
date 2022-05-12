@@ -1,4 +1,7 @@
 <h1>Listado Aperturas</h1>
+<div *ngIf="selected">
+  <app-apertura-detail [aperturaDetail]="selectedApertura"></app-apertura-detail>
+</div>
 <div class="container">
   <div class="row">
       <div class="col">
@@ -12,7 +15,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let a of getAperturasList()">
+            <tr *ngFor="let a of getAperturasList()" (click)="onSelected(a)">
               <td>
                 <dd>{{a.id}}</dd>
               </td>

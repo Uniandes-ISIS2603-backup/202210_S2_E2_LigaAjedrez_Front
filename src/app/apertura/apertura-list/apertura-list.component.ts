@@ -10,9 +10,17 @@ import { dataAperturas } from '../dataAperturas';
 export class AperturaListComponent implements OnInit {
 
   aperturas: Array<Apertura> = [];
+  selectedApertura!: Apertura;
+  selected = false;
+
   constructor() { }
   getAperturasList(): Array<Apertura>{
     return dataAperturas;
+  }
+
+  onSelected(apertura: Apertura): void{
+    this.selected = true;
+    this.selectedApertura = apertura;
   }
   ngOnInit() {
     this.aperturas = this.getAperturasList();
