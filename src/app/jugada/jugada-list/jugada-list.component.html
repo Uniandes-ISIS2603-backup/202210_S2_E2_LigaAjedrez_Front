@@ -1,0 +1,40 @@
+<p>
+  BUENAS
+</p>
+
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <table class="table">
+              <caption></caption>
+              <thead>
+                 <tr>
+                    <th scope="col" width="10px"><b>#</b></th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Movimiento</th>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Partida</th>
+                 </tr>
+              </thead>
+              <tbody>
+
+                <tr *ngFor="let j of getJugadasData()">
+                  <td>
+                    <dd>{{j.numeroJugada}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{j.movimiento}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{j.jugador.nombre}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{j.partida.id}}</dd>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
+</div>
