@@ -1,4 +1,4 @@
-export class Partida {
+export class Torneo {
   nombre: string;
   lugar: string;
   fechaInicio: Date;
