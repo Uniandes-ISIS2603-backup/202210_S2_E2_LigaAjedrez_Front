@@ -6,6 +6,7 @@ import { Torneo } from "../torneo/torneo";
 import { Partida } from "./partida";
 
 export class PartidaDetail extends Partida {
+
   jugadas: Array<Jugada>;
   jugadores: Array<Jugador>;
   comentarioPartida: Array<Comentario>;
