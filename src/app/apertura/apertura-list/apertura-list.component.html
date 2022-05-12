@@ -1,3 +1,29 @@
-<p>
-  apertura-list works!
-</p>
+<h1>Listado aperturas</h1>
+<body>
+  <table class="container-fluid">
+    <thead>
+      <tr>
+        <th class="h4">id</th>
+        <th class="h4">nombre</th>
+        <th class="h4">clasificacion</th>
+        <th class="h4">movimientos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of getAperturasList()">
+        <td>
+          <dd>{{a.id}}</dd>
+        </td>
+        <td>
+          <dd>{{a.nombre}}</dd>
+        </td>
+        <td>
+          <dd>{{a.clasificacion}}</dd>
+        </td>
+        <td>
+          <dd>{{a.movimientos}}</dd>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</body>
