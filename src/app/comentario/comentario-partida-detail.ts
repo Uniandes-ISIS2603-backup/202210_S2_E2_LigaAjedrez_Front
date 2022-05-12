@@ -3,15 +3,12 @@ import { Comentario } from "./comentario";
 
 export class ComentarioPartidaDetail extends Comentario{
 
-  partidas: Array<PartidaDetail> = [];
-
   constructor(
     id: number,
     valoracionCualitativa: string,
     valoracionCuantitativa: number,
     autor: string,
-    fechaPublicacion: any,
-    partidas: Array<PartidaDetail>
+    fechaPublicacion: any
    ) {
     super(
       id,
@@ -20,6 +17,5 @@ export class ComentarioPartidaDetail extends Comentario{
       autor,
       fechaPublicacion
      )
-    this.partidas = partidas;
   }
 }
