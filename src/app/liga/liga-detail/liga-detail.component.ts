@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Liga } from '../liga';
 
 @Component({
   selector: 'app-liga-detail',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liga-detail.component.css']
 })
 export class LigaDetailComponent implements OnInit {
-
+  @Input() ligaDetail!: Liga;
   constructor() { }
 
   ngOnInit() {
