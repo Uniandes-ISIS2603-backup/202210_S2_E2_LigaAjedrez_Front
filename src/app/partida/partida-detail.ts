@@ -1,5 +1,7 @@
+import { Apertura } from "../apertura/apertura";
 import { Jugada } from "../jugada/jugada";
 import { Jugador } from "../jugador/jugador";
+import { Torneo } from "../torneo/torneo";
 import { Partida } from "./partida";
 
 export class PartidaDetail extends Partida {
