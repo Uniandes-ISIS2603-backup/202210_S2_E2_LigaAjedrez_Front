@@ -1,6 +1,4 @@
-import { lutimes } from "fs";
 import * as internal from "stream";
-import { runInThisContext } from "vm";
 import { Partida } from "../partida/partida";
 
 export class Jugador {
@@ -10,8 +8,8 @@ export class Jugador {
   fechaNacimiento: string;
   lugarNacimiento: string;
   fotografia: string;
-  puntajeElo: internal;
-  partida = Partida;
+  puntajeElo: number;
+  partida : Partida;
 
   constructor(
 
@@ -19,8 +17,8 @@ export class Jugador {
     fechaNacimiento: string,
     lugarNacimiento: string,
     fotografia: string,
-    puntajeElo: internal,
-    partida = Partida
+    puntajeElo: number,
+    partida : Partida
 
   )
   {
