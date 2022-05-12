@@ -1,5 +1,8 @@
 <h1>Listado Jugador</h1>
-<div class="container">
+<div *ngIf="selected">
+  <app-jugador-detail [jugadorDetail]="selectedJugador"></app-jugador-detail>
+</div>
+<div class="container-fluid">
   <div class="row">
       <div class="col">
         <table class="table">
