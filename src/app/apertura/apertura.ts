@@ -1,6 +1,3 @@
-import { clearScreenDown } from "readline";
-
-
 export class Apertura {
   id: number;
   nombre: string;
