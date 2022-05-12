@@ -1,6 +1,33 @@
 <testExecutions version="1">
+  <file path="src/app/torneo/torneo-detail/torneo-detail.component.spec.ts">
+    <testCase name="TorneoDetailComponent should create" duration="50"/>
+  </file>
+  <file path="src/app/jugada/jugada-detail/jugada-detail.component.spec.ts">
+    <testCase name="JugadaDetailComponent should create" duration="9"/>
+  </file>
+  <file path="src/app/partida/partida-list/partida-list.component.spec.ts">
+    <testCase name="PartidaListComponent should create" duration="38"/>
+  </file>
+  <file path="src/app/torneo/torneo-list/torneo-list.component.spec.ts">
+    <testCase name="TorneoListComponent should create" duration="17"/>
+  </file>
+  <file path="src/app/jugador/jugador-detail/jugador-detail.component.spec.ts">
+    <testCase name="JugadorDetailComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="11"/>
+  </file>
+  <file path="src/app/apertura/apertura-list/apertura-list.component.spec.ts">
+    <testCase name="AperturaListComponent should create" duration="27"/>
+  </file>
+  <file path="src/app/liga/liga-list/liga-list.component.spec.ts">
+    <testCase name="LigaListComponent should create" duration="16"/>
+  </file>
+  <file path="src/app/comentario/comentario-partida-list/comentario-partida-list.component.spec.ts">
+    <testCase name="ComentarioPartidaListComponent should create" duration="17"/>
+  </file>
   <file path="src/app/liga/liga.service.spec.ts">
-    <testCase name="Service: Liga should ..." duration="24">
+    <testCase name="Service: Liga should ..." duration="10">
       <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[LigaService -&gt; HttpClient -&gt; HttpClient]: 
   NullInjectorError: No provider for HttpClient!
 error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'LigaService', 'HttpClient', 'HttpClient' ] })
@@ -19,37 +46,10 @@ NullInjectorError: R3InjectorError(DynamicTestModule)[LigaService -&gt; HttpClie
 </failure>
     </testCase>
   </file>
-  <file path="src/app/liga/liga-detail/liga-detail.component.spec.ts">
-    <testCase name="LigaDetailComponent should create" duration="38"/>
-  </file>
-  <file path="src/app/jugador/jugador-detail/jugador-detail.component.spec.ts">
-    <testCase name="JugadorDetailComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/torneo/torneo-detail/torneo-detail.component.spec.ts">
-    <testCase name="TorneoDetailComponent should create" duration="10"/>
-  </file>
-  <file path="src/app/liga/liga-list/liga-list.component.spec.ts">
-    <testCase name="LigaListComponent should create" duration="36"/>
-  </file>
-  <file path="src/app/partida/partida-list/partida-list.component.spec.ts">
-    <testCase name="PartidaListComponent should create" duration="22"/>
-  </file>
-  <file path="src/app/torneo/torneo-list/torneo-list.component.spec.ts">
-    <testCase name="TorneoListComponent should create" duration="15"/>
-  </file>
-  <file path="src/app/jugada/jugada-detail/jugada-detail.component.spec.ts">
-    <testCase name="JugadaDetailComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/comentario/comentario-partida-list/comentario-partida-list.component.spec.ts">
-    <testCase name="ComentarioPartidaListComponent should create" duration="16"/>
-  </file>
   <file path="src/app/comentario/comentario-jugada-list/comentario-jugada-list.component.spec.ts">
-    <testCase name="ComentarioJugadaListComponent should create" duration="17"/>
+    <testCase name="ComentarioJugadaListComponent should create" duration="23"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="13"/>
-  </file>
-  <file path="src/app/apertura/apertura-list/apertura-list.component.spec.ts">
-    <testCase name="AperturaListComponent should create" duration="19"/>
+  <file path="src/app/liga/liga-detail/liga-detail.component.spec.ts">
+    <testCase name="LigaDetailComponent should create" duration="8"/>
   </file>
 </testExecutions>
