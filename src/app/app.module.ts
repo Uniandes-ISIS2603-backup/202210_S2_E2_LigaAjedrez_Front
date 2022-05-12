@@ -5,17 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidaModule } from './partida/partida.module';
-<<<<<<< Updated upstream
 import { AperturaModule } from './apertura/apertura.module';
 import { JugadorModule } from './jugador/jugador.module';
 import { JugadaModule } from './jugada/jugada.module';
 
-=======
 import { LigaComponent } from './liga/liga.component';
->>>>>>> Stashed changes
+import { ComentarioModule } from './comentario/comentario.module';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       LigaComponent
    ],
@@ -25,7 +23,8 @@ import { LigaComponent } from './liga/liga.component';
     PartidaModule,
     JugadorModule,
     AperturaModule,
-    JugadaModule
+    JugadaModule,
+    ComentarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
