@@ -12,8 +12,17 @@ export class PartidaListComponent implements OnInit {
   partidas: Array<Partida> = [];
   constructor() { }
 
+  selectedPartida!: Partida;
+  selected: Boolean = false;
+
+  onSelected(Partida: Partida): void {
+    this.selected = true;
+    this.selectedPartida = Partida;
+  }
+
+
   getPartidasList(): Array<Partida>{
-    return dataPartida
+    return dataPartida;
   }
   ngOnInit() {
     this.partidas = this.getPartidasList();

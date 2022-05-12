@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Partida } from '../partida';
 
 @Component({
   selector: 'app-partida-detail',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidaDetailComponent implements OnInit {
 
+  @Input() partidaDetail!: Partida;
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

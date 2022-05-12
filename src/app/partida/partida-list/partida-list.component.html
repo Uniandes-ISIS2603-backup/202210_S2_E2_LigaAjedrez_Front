@@ -1,29 +1,37 @@
 <h1>Listado Partidas</h1>
-<body>
-  <table class="container-fluid">
-    <thead>
-      <tr>
-        <th class="h4">id</th>
-        <th class="h4">torneo</th>
-        <th class="h4">aperturaRealizada</th>
-        <th class="h4">resultado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let a of getPartidasList()">
-        <td>
-          <dd>{{a.id}}</dd>
-        </td>
-        <td>
-          <dd>{{a.torneo}}</dd>
-        </td>
-        <td>
-          <dd>{{a.aperturaRealizada}}</dd>
-        </td>
-        <td>
-          <dd>{{a.resultado}}</dd>
-        </td>
-    </tr>
-    </tbody>
-  </table>
-</body>
+<div *ngIf="selected">
+  <app-partida-detail [partidaDetail]="selectedPartida"></app-partida-detail>
+ </div>
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <table class="table">
+              <caption></caption>
+              <thead>
+                 <tr>
+                    <th scope="col" width="10px"><b>#</b></th>
+                    <th scope="col">Torneo</th>
+                    <th scope="col">Apertura Realizada</th>
+                    <th scope="col">Resultado</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let a of getPartidasList()" (click)="onSelected(a)">
+                  <td>
+                    <dd>{{a.id}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{a.torneo.nombre}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{a.aperturaRealizada.nombre}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{a.resultado}}</dd>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
