@@ -4,7 +4,6 @@ import { Partida } from "../partida/partida";
 import { Torneo } from "./torneo";
 
 export class TorneoDetail extends Torneo {
-  liga : Array<Liga>;
   jugadores: Array<Jugador>;
   partidas: Array<Partida>;
 
@@ -17,9 +16,8 @@ export class TorneoDetail extends Torneo {
     jugadores: Array<Jugador>,
     partidas: Array<Partida>
     ) {
-      super(nombre, lugar, fechaInicio, premio);
-      this.liga = liga;
-      this.jugadores = jugadores;
-      this.partidas = partidas;
+      super(nombre, lugar, fechaInicio, premio, liga);
+            this.jugadores = jugadores;
+            this.partidas = partidas;
   }
 }
