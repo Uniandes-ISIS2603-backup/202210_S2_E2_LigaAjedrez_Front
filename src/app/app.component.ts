@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataMejorJugador } from './dataPruebaMainPage';
+import { Jugador } from './jugador/jugador';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ligaajedrez-front';
+  mejorJugador!: Jugador;
+
+  getMejorJugador(): Jugador {
+
+    return DataMejorJugador;
+  }
+
+  ngOnInit(){
+    this.mejorJugador = this.getMejorJugador();
+  }
 }
+
+

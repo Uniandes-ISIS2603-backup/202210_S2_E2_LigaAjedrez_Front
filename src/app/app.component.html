@@ -86,10 +86,19 @@
 <!-- Main Router Outlet -->
 <div class="container-fluid" id="principal">
   <div class="row">
-    <div class="col-md-12">
-      <div>
-        <router-outlet></router-outlet>
+    <div class="col-lg-8 col-sm-12">
+      <div class="container-fluid">
+        <div class="row">
+          <h2> Últimas partidas </h2>
+        </div>
+        <div class="row">
+          <app-partida-list></app-partida-list>
+        </div>
       </div>
+    </div>
+    <div class="col-lg-3 col-sm-12 text-center">
+      <h3> Jugador Destacado</h3>
+      <app-jugador-detail [jugadorDetail]="mejorJugador"></app-jugador-detail>
     </div>
   </div>
 </div>
@@ -102,7 +111,7 @@
 </footer>
 
 <app-jugada-list></app-jugada-list>
-<app-partida-list></app-partida-list>
+
 <app-jugador-list></app-jugador-list>
 
 <app-apertura-list></app-apertura-list>
