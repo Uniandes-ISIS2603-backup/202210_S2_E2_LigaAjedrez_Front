@@ -1,11 +1,112 @@
+<!-- Navigation bar -->
+
+<nav
+  class="navbar navbar-expand-lg navbar-light sticky-top"
+  style="background-color: #26d8ff"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo-icon.png" width="50" height="50" class="d-inline-block align-top" alt="">
+      Liga de Ajedrez
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item nav-link">
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            routerLink="/jugadores/list"
+          >
+            Jugadores
+          </a>
+        </li>
+
+        <li class="nav-item nav-link">
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            routerLink="/torneos/list"
+          >
+            Torneos
+          </a>
+        </li>
+
+        <li class="nav-item nav-link">
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            routerLink="/partidas/list"
+          >
+            Partidas
+          </a>
+        </li>
+
+        <li class="nav-item nav-link">
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            routerLink="/aperturas/list"
+          >
+            Aperturas
+          </a>
+        </li>
+
+        <li class="nav-item nav-link">
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            routerLink="/ligas/list"
+          >
+            Otras Ligas
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Router Outlet -->
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-copyright text-center py-2">
+    64Boxes -
+    <a routerLink="/books/list" id="colorFooterText2"> Liga de Ajedrez</a>
+  </div>
+</footer>
+
 <app-jugada-list></app-jugada-list>
 <app-partida-list></app-partida-list>
 <app-jugador-list></app-jugador-list>
 
-
 <app-apertura-list></app-apertura-list>
 <app-torneo-list></app-torneo-list>
-
 
 <app-comentario-partida-list></app-comentario-partida-list>
 <app-comentario-jugada-list></app-comentario-jugada-list>
