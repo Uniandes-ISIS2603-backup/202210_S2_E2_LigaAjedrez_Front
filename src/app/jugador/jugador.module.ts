@@ -7,7 +7,7 @@ import { JugadorDetailComponent } from './jugador-detail/jugador-detail.componen
   imports: [
     CommonModule
   ],
-  exports:[JugadorListComponent],
+  exports:[JugadorListComponent, JugadorDetailComponent],
   declarations: [JugadorListComponent,JugadorDetailComponent]
 })
 export class JugadorModule { }
