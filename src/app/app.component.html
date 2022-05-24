@@ -5,9 +5,23 @@
   style="background-color: #26d8ff"
 >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/logo-icon.png" width="50" height="50" class="d-inline-block align-top" alt="">
-      Liga de Ajedrez
+    <a class="navbar-brand" href="#" id="home">
+      <div class="row">
+        <div class="col">
+          <img
+            src="assets/images/logo-icon.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+            alt=""
+          />
+        </div>
+
+      <div class="col">
+        <div class="row">64boxes</div>
+        <div class="row">Liga de Ajedrez</div>
+      </div>
+      </div>
     </a>
     <button
       class="navbar-toggler"
@@ -22,7 +36,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-
         <li class="nav-item nav-link">
           <a
             class="nav-link"
@@ -35,12 +48,7 @@
         </li>
 
         <li class="nav-item nav-link">
-          <a
-            class="nav-link"
-            href="#"
-            role="button"
-            routerLink="/torneos/list"
-          >
+          <a class="nav-link" href="#" role="button" routerLink="/torneos/list">
             Torneos
           </a>
         </li>
@@ -68,16 +76,10 @@
         </li>
 
         <li class="nav-item nav-link">
-          <a
-            class="nav-link"
-            href="#"
-            role="button"
-            routerLink="/ligas/list"
-          >
+          <a class="nav-link" href="#" role="button" routerLink="/ligas/list">
             Otras Ligas
           </a>
         </li>
-
       </ul>
     </div>
   </div>
@@ -89,7 +91,7 @@
     <div class="col-lg-8 col-sm-12">
       <div class="container-fluid">
         <div class="row">
-          <h2> Últimas partidas </h2>
+          <h2>Últimas partidas</h2>
         </div>
         <div class="row">
           <app-partida-list></app-partida-list>
@@ -97,7 +99,7 @@
       </div>
     </div>
     <div class="col-lg-3 col-sm-12 text-center">
-      <h3> Jugador Destacado</h3>
+      <h3>Jugador Destacado</h3>
       <app-jugador-detail [jugadorDetail]="mejorJugador"></app-jugador-detail>
     </div>
   </div>
