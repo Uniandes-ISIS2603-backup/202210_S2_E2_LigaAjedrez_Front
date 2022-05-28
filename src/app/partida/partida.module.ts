@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [CommonModule, RouterModule, PartidaRoutingModule, ReactiveFormsModule],
-  exports: [PartidaListComponent],
+  exports: [PartidaListComponent, PartidaDetailComponent],
   declarations: [PartidaListComponent, PartidaDetailComponent]
 })
 export class PartidaModule { }

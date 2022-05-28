@@ -11,3 +11,8 @@
   text-align: center;
   vertical-align: top;
 }
+
+.container-fluid-center {
+  margin: auto;
+  width: auto;
+}

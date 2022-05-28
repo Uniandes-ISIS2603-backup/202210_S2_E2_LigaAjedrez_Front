@@ -1,21 +1,14 @@
-
-<div class="container-fluid text-center">
-    <div class="row">
-      <div class="col-12">
-        <img src="{{ jugadorDetail.fotografia }}"width="200" height="200" style="border-radius:50%" alt="{{ jugadorDetail.nombre }}" >
-      </div>
-      <div class="col-12">
-        <p class="h5 p-6">{{ jugadorDetail.nombre }}</p>
-      </div>
-      <div class="col-12">
-        <p class="h7 p-7">Fecha de nacimiento: {{ jugadorDetail.fechaNacimiento }}</p>
-      </div>
-      <div class="col-12">
-        <p class="h7 p-7">Lugar de Nacimiento: {{ jugadorDetail.lugarNacimiento }}</p>
-      </div>
-      <div class="col-12">
-        <p class="h7 p-7">ELO: {{ jugadorDetail.puntajeElo }}</p>
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <div class="col">
+      <div align="center">
+        <img src="{{ jugadorDetail.fotografia }}"width="212" height="212" style="border-radius:50%" alt="{{ jugadorDetail.nombre }}" >
       </div>
     </div>
+    <h5 align="center"><br>{{ jugadorDetail.nombre }}</h5>
+    <p align="center">Fecha de Nacimiento: <strong>{{ jugadorDetail.fechaNacimiento }}</strong></p>
+    <p align="center">Lugar de Nacimiento: <strong>{{ jugadorDetail.lugarNacimiento }}</strong></p>
+    <p align="center">ELO: <strong>{{ jugadorDetail.puntajeElo }}</strong></p>
   </div>
+</div>
 

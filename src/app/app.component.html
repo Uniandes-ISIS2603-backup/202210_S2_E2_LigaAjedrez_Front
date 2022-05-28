@@ -11,15 +11,14 @@
           <img
             src="assets/images/logo-icon.png"
             width="50"
-            height="50"
+            height="60"
             class="d-inline-block align-top"
             alt=""
           />
         </div>
-
       <div class="col">
-        <div class="row">64boxes</div>
-        <div class="row">Liga de Ajedrez</div>
+        <div class="row"><strong>64 BOXES CLUB</strong></div>
+        <div class="row"><h4>Liga de Ajedrez</h4></div>
       </div>
       </div>
     </a>
@@ -37,47 +36,28 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item nav-link">
-          <a
-            class="nav-link"
-            href="#"
-            role="button"
-            routerLink="/jugadores/list"
-          >
-            Jugadores
+          <a class="nav-link" href="#" role="button" routerLink="/jugadores/list">
+          <h4>&#x265A; Jugadores</h4>
           </a>
         </li>
-
         <li class="nav-item nav-link">
           <a class="nav-link" href="#" role="button" routerLink="/torneos/list">
-            Torneos
+            <h4>&#x265B; Torneos</h4>
           </a>
         </li>
-
         <li class="nav-item nav-link">
-          <a
-            class="nav-link"
-            href="#"
-            role="button"
-            routerLink="/partidas/list"
-          >
-            Partidas
+          <a class="nav-link" href="#" role="button" routerLink="/partidas/list">
+            <h4>&#x265C; Partidas</h4>
           </a>
         </li>
-
         <li class="nav-item nav-link">
-          <a
-            class="nav-link"
-            href="#"
-            role="button"
-            routerLink="/aperturas/list"
-          >
-            Aperturas
+          <a class="nav-link" href="#" role="button" routerLink="/aperturas/list">
+            <h4>&#x265D; Aperturas</h4>
           </a>
         </li>
-
         <li class="nav-item nav-link">
           <a class="nav-link" href="#" role="button" routerLink="/ligas/list">
-            Otras Ligas
+            <h4>&#x265E; Otras Ligas</h4>
           </a>
         </li>
       </ul>
@@ -86,28 +66,23 @@
 </nav>
 
 <!-- Main Router Outlet -->
-<div class="container-fluid" id="principal">
+<div class="row-auto">
+  <br>
+  <br>
+</div>
+<div class="container">
+  <div class="row"><h2>ULTIMAS PARTIDAS</h2>
+  </div>
   <div class="row">
-    <div class="col-lg-8 col-sm-12">
-      <div class="container-fluid">
-        <div class="row">
-          <h2>Últimas partidas</h2>
-        </div>
-        <div class="row">
-          <app-partida-list></app-partida-list>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-sm-12 text-center">
-      <h3>Jugador Destacado</h3>
+    <app-partida-detail></app-partida-detail>
+    <div class="col-sm">
       <app-jugador-detail [jugadorDetail]="mejorJugador"></app-jugador-detail>
     </div>
   </div>
 </div>
-
 <footer class="page-footer">
   <div class="footer-copyright text-center py-2">
-    64Boxes -
+    64BoxesClub -
     <a routerLink="/books/list" id="colorFooterText2"> Liga de Ajedrez</a>
   </div>
 </footer>
@@ -115,7 +90,7 @@
 <app-jugada-list></app-jugada-list>
 
 <app-jugador-list></app-jugador-list>
-
+<app-partida-list></app-partida-list>
 <app-apertura-list></app-apertura-list>
 <app-torneo-list></app-torneo-list>
 
