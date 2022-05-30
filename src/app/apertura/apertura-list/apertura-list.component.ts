@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apertura } from '../apertura';
-import { dataAperturas } from '../dataAperturas';
+import { AperturaDetail } from '../apertura-detail';
+import { AperturaService } from '../apertura.service';
 
 @Component({
   selector: 'app-apertura-list',
@@ -9,20 +10,23 @@ import { dataAperturas } from '../dataAperturas';
 })
 export class AperturaListComponent implements OnInit {
 
-  aperturas: Array<Apertura> = [];
-  selectedApertura!: Apertura;
+  aperturas: Array<AperturaDetail> = [];
+  selectedApertura!: AperturaDetail;
   selected = false;
 
-  constructor() { }
-  getAperturasList(): Array<Apertura>{
-    return dataAperturas;
+  constructor( private aperturaService: AperturaService) { }
+
+  getAperturas(): void {
+    this.aperturaService.getAperturas().subscribe((aperturas) => {
+      this.aperturas = aperturas;
+    });
   }
 
-  onSelected(apertura: Apertura): void{
+  onSelected(apertura: AperturaDetail): void{
     this.selected = true;
     this.selectedApertura = apertura;
   }
   ngOnInit() {
-    this.aperturas = this.getAperturasList();
+    this.getAperturas();
   }
 }
