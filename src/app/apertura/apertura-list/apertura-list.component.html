@@ -1,3 +1,4 @@
+<!--
 <h1>Listado Aperturas</h1>
 <div *ngIf="selected">
   <app-apertura-detail [aperturaDetail]="selectedApertura"></app-apertura-detail>
@@ -35,4 +36,28 @@
 
   </div>
 </div>
+-->
+<div *ngIf="selected">
+  <app-apertura-detail [aperturaDetail]="selectedApertura"></app-apertura-detail>
+</div>
 
+<hr />
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let apertura of aperturas" class="col mb-2">
+      <div class="card p-2" style="width: 15rem; height: 22rem">
+        <img
+          class="card-img-top"
+          src="{{ apertura.imagen }}"
+          alt="{{ apertura.nombre }}"
+          (click)="onSelected(apertura)"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ apertura.nombre }}</h5>
+          <p class="card-text">{{ apertura.clasificacion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
