@@ -2,7 +2,7 @@ import { Partida } from "../partida/partida";
 
 export class Jugador {
 
-
+  id:number;
   nombre: string;
   fechaNacimiento: string;
   lugarNacimiento: string;
@@ -12,6 +12,7 @@ export class Jugador {
 
   constructor(
 
+    id:number,
     nombre: string,
     fechaNacimiento: string,
     lugarNacimiento: string,
@@ -21,6 +22,7 @@ export class Jugador {
 
   )
   {
+    this.id= id;
     this.nombre = nombre;
     this.fechaNacimiento = fechaNacimiento;
     this.lugarNacimiento = lugarNacimiento;
