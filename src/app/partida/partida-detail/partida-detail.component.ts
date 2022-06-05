@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Partida } from '../partida';
+import { PartidaDetail } from '../partida-detail';
 import { PartidaService } from '../partida.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { PartidaService } from '../partida.service';
 export class PartidaDetailComponent implements OnInit {
 
   partidaId!: string;
-  @Input() partidaDetail!: Partida;
+  @Input() partidaDetail!: PartidaDetail;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,7 +20,7 @@ export class PartidaDetailComponent implements OnInit {
   ) { }
 
   getPartida(){
-    this.partidaService.getPartida(this.partidaId).subscribe((partida: Partida)=>{
+    this.partidaService.getPartida(this.partidaId).subscribe((partida: PartidaDetail)=>{
       this.partidaDetail = partida;
     })
   }
