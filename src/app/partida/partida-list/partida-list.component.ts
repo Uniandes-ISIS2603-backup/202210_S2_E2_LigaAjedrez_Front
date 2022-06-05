@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { dataPartida } from '../dataPartida';
 import { Partida } from '../partida';
+import { PartidaService } from '../partida.service';
 
 @Component({
   selector: 'app-partida-list',
@@ -10,21 +10,23 @@ import { Partida } from '../partida';
 export class PartidaListComponent implements OnInit {
 
   partidas: Array<Partida> = [];
-  constructor() { }
-
   selectedPartida!: Partida;
   selected: Boolean = false;
+
+  constructor(private partidaService: PartidaService) { }
 
   onSelected(Partida: Partida): void {
     this.selected = true;
     this.selectedPartida = Partida;
   }
 
-
-  getPartidasList(): Array<Partida>{
-    return dataPartida;
+  getPartidasList(): void{
+    this.partidaService.getPartidas().subscribe((partidas) => {
+      this.partidas = partidas;
+    });
   }
+
   ngOnInit() {
-    this.partidas = this.getPartidasList();
+    this.getPartidasList();
   }
 }

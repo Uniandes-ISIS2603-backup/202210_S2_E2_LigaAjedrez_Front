@@ -1,41 +1,26 @@
-
 <div class="container">
   <div class="row">
-    <div class="col">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col" width="10px"><b>#</b></th>
-            <th scope="col">Liga</th>
-            <th scope="col">Torneo</th>
-            <th scope="col">Apertura Realizada</th>
-            <th scope="col">Resultado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let a of getPartidasList()" (click)="onSelected(a)">
-            <td>
-              <dd>{{a.id}}</dd>
-            </td>
-            <td>
-              <dd>{{a.torneo.liga.nombre}}</dd>
-            </td>
-            <td>
-              <dd>{{a.torneo.nombre}}</dd>
-            </td>
-            <td>
-              <dd>{{a.aperturaRealizada.nombre}}</dd>
-            </td>
-            <td>
-              <dd>{{a.resultado}}</dd>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col">
+
+      <div *ngFor="let partida of partidas" class="col mb-2">
+        <div class="card p-2" style="width: 15rem; height: 22rem" routerLink ="/partidas/{{partida.id}}">
+          <img
+            class="card-img-top"
+            src="https://docs.kde.org/trunk5/es/knights/knights/Knights-board-setup.png"
+            alt="{{ partida.id }}"
+            (click)="onSelected(partida)"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ partida.resultado }}</h5>
+            <p class="card-text">{{ partida.torneo.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="col-sm-12 col-lg-4">
       <div *ngIf="selected">
-        <app-partida-detail [partidaDetail]="selectedPartida"></app-partida-detail>
+        <app-partida-detail
+          [partidaDetail]="selectedPartida"
+        ></app-partida-detail>
       </div>
     </div>
   </div>

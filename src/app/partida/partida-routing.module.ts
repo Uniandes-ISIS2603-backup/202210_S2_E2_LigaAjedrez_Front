@@ -4,7 +4,7 @@ import { PartidaDetailComponent } from './partida-detail/partida-detail.componen
 import { PartidaListComponent } from './partida-list/partida-list.component';
 
 const routes: Routes = [{
-  path: 'books',
+  path: 'partidas',
   children: [
     {
       path: 'list',
