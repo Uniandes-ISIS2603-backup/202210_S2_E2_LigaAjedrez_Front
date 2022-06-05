@@ -9,8 +9,9 @@ import { PartidaService } from '../partida.service';
   styleUrls: ['./partida-list.component.css']
 })
 export class PartidaListComponent implements OnInit {
-
-  partidas: Array<Partida> = [];
+//partidas: Array<Partida> = [];
+  partidas: Array<PartidaDetail> = [];
+  //selectedPartida!: Partida;
   selectedPartida!: PartidaDetail;
   selected: Boolean = false;
 
