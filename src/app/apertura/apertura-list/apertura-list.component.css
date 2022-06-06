@@ -1,0 +1,15 @@
+img {
+  height: 240px;
+  width: auto;
+  max-width: 240px;
+}
+
+#AperturaCard{
+  border-color: black;
+  background-color: skyblue;
+  margin-bottom: 10px;
+}
+
+#Contenedor{
+  margin-top: 50px;
+}

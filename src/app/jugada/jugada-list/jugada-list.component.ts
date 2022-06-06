@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { dataJugadas } from '../dataJugadas';
 import { Jugada } from '../jugada';
 import { JugadaService } from '../jugada.service';
 
@@ -11,28 +10,16 @@ import { JugadaService } from '../jugada.service';
 })
 export class JugadaListComponent implements OnInit {
 
-  constructor(private jugadaService: JugadaService) { }
-
-  private jugadasC: Array<Jugada>=[];
-
-  ngOnInit() {
-    //this.getJugadasServicio();
-  }
-
+  jugadasC: Array<Jugada>=[];
   selectedJugada!: Jugada;
   selected = false;
+
+  constructor(private jugadaService: JugadaService) { }
 
   onSelected(jugada: Jugada): void{
     this.selected = true;
     this.selectedJugada = jugada;
   }
-
-
-  getJugadasData(): Array<Jugada> {
-    //return dataJugadas;
-    return dataJugadas;
-  }
-
 
   getJugadasServicio()
   {
@@ -40,5 +27,12 @@ export class JugadaListComponent implements OnInit {
       jugadas => {this.jugadasC = jugadas;}
       );
   }
+
+  ngOnInit() {
+    this.getJugadasServicio();
+  }
+
+
+
 
 }

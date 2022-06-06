@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PartidaDetailComponent } from './partida-detail/partida-detail.component';
-import { PartidaListComponent } from './partida-list/partida-list.component';
+import { TorneoDetailComponent } from './torneo-detail/torneo-detail.component';
+import { TorneoListComponent } from './torneo-list/torneo-list.component';
 
 const routes: Routes = [{
-  path: 'partidas',
+  path: 'torneos',
   children: [
     {
       path: 'list',
-      component: PartidaListComponent
+      component: TorneoListComponent
     },
     {
       path: ':id',
-      component: PartidaDetailComponent
+      component: TorneoDetailComponent
     },
   ]
 }];
@@ -21,4 +21,4 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PartidaRoutingModule { }
+export class TorneoRoutingModule { }

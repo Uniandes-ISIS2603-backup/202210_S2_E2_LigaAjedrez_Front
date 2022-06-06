@@ -9,9 +9,10 @@ export class AperturaDetail extends Apertura{
     nombre: string,
     clasificacion: string,
     movimientos: string,
+    imagen: string,
     partidas: Array<Partida>
   ){
-    super(id, nombre, clasificacion, movimientos);
+    super(id, nombre, clasificacion, movimientos,imagen);
     this.partidas = partidas;
   }
 }

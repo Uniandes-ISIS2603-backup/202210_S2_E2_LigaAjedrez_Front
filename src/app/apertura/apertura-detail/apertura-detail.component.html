@@ -1,33 +1,20 @@
-<h3>Detalles de la apertura</h3>
 <div class="container-fluid">
-  <div class="col">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col" width="10px"><b>#</b></th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Clasificacion</th>
-          <th scope="col">Movimientos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <dd>{{aperturaDetail.id}}</dd>
-          </td>
-          <td>
-            <dd>{{aperturaDetail.nombre}}</dd>
-          </td>
-          <td>
-            <dd>{{aperturaDetail.clasificacion}}</dd>
-          </td>
-          <td>
-            <dd>{{aperturaDetail.movimientos}}</dd>
-          </td>
-      </tr>
-      </tbody>
-    </table>
+  <h2 id="NombreApertura" >{{ aperturaDetail.nombre }}</h2>
+  <div class="row">
+    <div class="col-3">
+      <div class="thumb">
+        <img class="img-fluid" src="{{ aperturaDetail.imagen }}" alt="{{ aperturaDetail.nombre }}" />
+      </div>
+    </div>
+    <div id="Detalle" class="col">
+      <dl>
+        <dt>Clasificacion</dt>
+        <dd>{{ aperturaDetail.clasificacion }}</dd>
+        <hr />
+        <dt>Movimientos</dt>
+        <dd>{{ aperturaDetail.movimientos }}</dd>
+        <hr />
+      </dl>
+    </div>
   </div>
 </div>
-
-

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Liga } from '../liga';
-import { dataLigas } from '../dataLigas';
+import { LigaService } from '../liga.service';
 
 @Component({
   selector: 'app-liga-list',
@@ -9,12 +9,17 @@ import { dataLigas } from '../dataLigas';
 })
 export class LigaListComponent implements OnInit {
   ligas : Array<Liga> = [];
-  constructor() { }
-  getLigasList() : Array<Liga> {
-    return dataLigas;
+
+  constructor(private ligaService: LigaService) { }
+
+  getLigas() : void {
+    this.ligaService.getLigas().subscribe((ligas: Liga[]) => {
+      this.ligas = ligas;
+    });
+
   }
   ngOnInit() {
-    this.ligas = this.getLigasList();
+    this.getLigas();
   }
 
 }

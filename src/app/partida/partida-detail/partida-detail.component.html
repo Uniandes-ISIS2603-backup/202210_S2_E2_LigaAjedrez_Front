@@ -1,19 +1,36 @@
-<h4>Detalle de la Partidas</h4>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <tr><b>#</b></tr>
-      <tr><b>Liga:</b></tr>
-      <tr><b>Torneo:</b></tr>
-      <tr><b>Apertura Realizada:</b></tr>
-      <tr><b>Resultado:</b></tr>
+<div class="container-fluid">
+  <div class="row centrado">
+    <p class="h2 p-3">Partida: {{ partidaDetail.id }}</p>
+  </div>
+
+  <div class="row centrado d-flex justify-content-center">
+    <div class="col-sm-12 col-lg-4">
+      <div class="thumb">
+        <img
+          class="card-img-top"
+          src="https://docs.kde.org/trunk5/es/knights/knights/Knights-board-setup.png"
+          alt="{{ partidaDetail.id }}"
+        />
+      </div>
     </div>
+
+
+    <div class="col-sm-12 col-lg-7 card-group">
+      <div *ngFor="let jugador of partidaDetail.jugadores">
+        <app-jugador-detail [jugadorDetail]="jugador"></app-jugador-detail>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <p class="h2 p-3">Comentarios</p>
+  </div>
+  <div class="row centrado">
     <div class="col">
-      <tr>{{partidaDetail.id}}</tr>
-      <tr>{{partidaDetail.torneo.liga.nombre}}</tr>
-      <tr>{{partidaDetail.torneo.nombre}}</tr>
-      <tr>{{partidaDetail.aperturaRealizada.nombre}}</tr>
-      <tr>{{partidaDetail.resultado}}</tr>
+      <div *ngFor="let comentario of partidaDetail.comentarios">
+        <app-comentario-partida-detail [comentarioPartidaDetail]="comentario"></app-comentario-partida-detail>
+      </div>
     </div>
   </div>
 </div>
+

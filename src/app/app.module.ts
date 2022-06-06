@@ -11,11 +11,13 @@ import { JugadaModule } from './jugada/jugada.module';
 import { ComentarioModule } from './comentario/comentario.module';
 import { LigaModule } from './liga/liga.module';
 import { TorneoModule } from './torneo/torneo.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+      HomeComponent
    ],
    imports: [
     BrowserModule,

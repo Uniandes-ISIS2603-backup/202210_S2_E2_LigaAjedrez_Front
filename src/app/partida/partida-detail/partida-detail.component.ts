@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Partida } from '../partida';
+import { PartidaDetail } from '../partida-detail';
+import { PartidaService } from '../partida.service';
 
 @Component({
   selector: 'app-partida-detail',
@@ -8,10 +11,26 @@ import { Partida } from '../partida';
 })
 export class PartidaDetailComponent implements OnInit {
 
-  @Input() partidaDetail!: Partida;
+  partidaId!: string;
+  @Input() partidaDetail!: PartidaDetail;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private partidaService: PartidaService
+  ) { }
+
+  getPartida(){
+    this.partidaService.getPartida(this.partidaId).subscribe((partida: PartidaDetail)=>{
+      this.partidaDetail = partida;
+    })
+  }
 
   ngOnInit() {
+    if(this.partidaDetail === undefined){
+      this.partidaId = this.route.snapshot.paramMap.get('id')!
+      if (this.partidaId) {
+        this.getPartida();
+      }
+    }
   }
 }
