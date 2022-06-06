@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Jugador } from '../jugador';
+import { JugadorService } from '../jugador.service';
 
 @Component({
   selector: 'app-jugador-detail',
@@ -8,10 +10,24 @@ import { Jugador } from '../jugador';
 })
 export class JugadorDetailComponent implements OnInit {
 
+  jugadorId!: string;
   @Input() jugadorDetail!: Jugador;
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private jugadorService: JugadorService) { }
 
-  ngOnInit() {
+  getjugador(){
+    this.jugadorService.getJugador(this.jugadorId).subscribe((jugador: Jugador)=>{
+      this.jugadorDetail = jugador;
+    })
   }
 
+  ngOnInit() {
+    if(this.jugadorDetail === undefined){
+      this.jugadorId = this.route.snapshot.paramMap.get('id')!
+      if(this.jugadorId){
+        this.getjugador();
+      }
+    }
+  }
 }

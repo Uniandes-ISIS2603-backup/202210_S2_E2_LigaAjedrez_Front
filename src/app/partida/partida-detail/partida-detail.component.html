@@ -1,36 +1,31 @@
-
-
 <div class="container-fluid">
   <p class="h2 p-3">{{ partidaDetail.id }}</p>
   <div class="row">
     <div class="col-3">
       <div class="thumb">
         <img
-            class="card-img-top"
-            src="https://docs.kde.org/trunk5/es/knights/knights/Knights-board-setup.png"
-            alt="{{ partidaDetail.id }}"
-          />
+          class="card-img-top"
+          src="https://docs.kde.org/trunk5/es/knights/knights/Knights-board-setup.png"
+          alt="{{ partidaDetail.id }}"
+        />
       </div>
     </div>
-    <div class="col">
-
-    </div>
+    <div class="col"></div>
   </div>
 </div>
 
-
-<div *ngFor="let jugador of partidaDetail.jugadores" class="col mb-2">
-  <div class="card p-2" style="width: 15rem; height: 22rem" routerLink ="/jugadores/{{jugador.id}}">
-    <img
-      class="card-img-top"
-      src="{{jugador.fotografia}}"
-      alt="{{ jugador.id }}"
-    />
+<div *ngFor="let jugadorDetail of partidaDetail.jugadores" class="col mb-2">
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">{{ jugador.nombre }}</h5>
-      <p class="card-text">{{ jugador.id }}</p>
+      <div class="col">
+        <div align="center">
+          <img src="{{ jugadorDetail.fotografia }}"width="212" height="212" style="border-radius:50%" alt="{{ jugadorDetail.nombre }}" >
+        </div>
+      </div>
+      <h5 align="center"><br>{{ jugadorDetail.nombre }}</h5>
+      <p align="center">Fecha de Nacimiento: {{ jugadorDetail.fechaNacimiento }}</p>
+      <p align="center">Lugar de Nacimiento: {{ jugadorDetail.lugarNacimiento }}</p>
+      <p align="center">ELO: <strong>{{ jugadorDetail.puntajeElo }}</strong></p>
     </div>
   </div>
 </div>
-
-

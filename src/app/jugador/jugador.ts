@@ -8,7 +8,6 @@ export class Jugador {
   lugarNacimiento: string;
   fotografia: string;
   puntajeElo: number;
-  partida : Partida;
 
   constructor(
 
@@ -18,7 +17,6 @@ export class Jugador {
     lugarNacimiento: string,
     fotografia: string,
     puntajeElo: number,
-    partida : Partida
 
   )
   {
@@ -28,6 +26,5 @@ export class Jugador {
     this.lugarNacimiento = lugarNacimiento;
     this.fotografia = fotografia;
     this.puntajeElo = puntajeElo;
-    this.partida = partida;
   }
 }

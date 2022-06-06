@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { dataJugador } from '../dataJugador';
-import { Jugador } from '../jugador';
-
+import { JugadorDetail } from '../jugador-detail';
 import { JugadorService } from '../jugador.service';
 
 @Component({
@@ -11,23 +9,25 @@ import { JugadorService } from '../jugador.service';
 })
 export class JugadorListComponent implements OnInit {
 
-  jugadores: Array<Jugador> = [];
+  jugadores: Array<JugadorDetail> = [];
   selected = false;
-  selectedJugador!: Jugador;
+  selectedJugador!: JugadorDetail;
 
   constructor(private jugadorService: JugadorService) { }
 
-  getJugadorList(): Array<Jugador>{
-    return dataJugador;
+  getJugadores(): void{
+    this.jugadorService.getJugadores().subscribe((jugadores: JugadorDetail[]) => {
+      this.jugadores = jugadores;
+    });
   }
 
-  onSelected(jugador: Jugador): void{
+  onSelected(jugador: JugadorDetail): void{
     this.selected = true;
     this.selectedJugador = jugador;
   }
 
   ngOnInit() {
-    this.jugadores = this.getJugadorList();
+    this.getJugadores();
   }
 
 }
