@@ -1,14 +1,44 @@
-<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-body">
-    <div class="col">
-      <div align="center">
-        <img src="{{ jugadorDetail.fotografia }}"width="212" height="212" style="border-radius:50%" alt="{{ jugadorDetail.nombre }}" >
+<!--
+<div class="center">
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div id="Detalle" class="card-body">
+      <div class="col">
+        <div align="center">
+          <img src="{{ jugadorDetail.fotografia }}" width="212" height="212" style="border-radius:50%"
+            alt="{{ jugadorDetail.nombre }}">
+        </div>
       </div>
+      <h5 align="center"><br>{{ jugadorDetail.nombre }}</h5>
+      <p align="center">Fecha de Nacimiento: {{ jugadorDetail.fechaNacimiento }} soplamonda</p>
+      <p align="center">Lugar de Nacimiento: {{ jugadorDetail.lugarNacimiento }}</p>
+      <p align="center">ELO: <strong>{{ jugadorDetail.puntajeElo }}</strong></p>
     </div>
-    <h5 align="center"><br>{{ jugadorDetail.nombre }}</h5>
-    <p align="center">Fecha de Nacimiento: {{ jugadorDetail.fechaNacimiento }} soplamonda</p>
-    <p align="center">Lugar de Nacimiento: {{ jugadorDetail.lugarNacimiento }}</p>
-    <p align="center">ELO: <strong>{{ jugadorDetail.puntajeElo }}</strong></p>
   </div>
 </div>
+-->
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div class="thumb">
+        <img class="img-fluid" src="{{ jugadorDetail.fotografia }}" alt="{{ jugadorDetail.nombre }}" />
+      </div>
+    </div>
+    <div id="Detalle" class="col">
+      <dl>
+        <dt>Nombre</dt>
+        <dd>{{ jugadorDetail.nombre }}</dd>
+        <hr />
+        <dt>Fecha de Nacimiento</dt>
+        <dd>{{ jugadorDetail.fechaNacimiento }}</dd>
+        <hr />
+        <dt>Lugar de Nacimiento</dt>
+        <dd>{{ jugadorDetail.lugarNacimiento }}</dd>
+        <hr />
+        <dt>ELO</dt>
+        <dd>{{ jugadorDetail.puntajeElo }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>

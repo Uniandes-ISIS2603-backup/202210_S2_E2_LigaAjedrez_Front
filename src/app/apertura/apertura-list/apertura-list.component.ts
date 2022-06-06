@@ -25,6 +25,11 @@ export class AperturaListComponent implements OnInit {
   onSelected(apertura: AperturaDetail): void{
     this.selected = true;
     this.selectedApertura = apertura;
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+});
   }
   ngOnInit() {
     this.getAperturas();

@@ -3,3 +3,14 @@ img {
   width: auto;
   max-width: 240px;
 }
+
+
+#JugadorCard{
+  border-color: black;
+  background-color:cornsilk;
+  margin-bottom: 10px;
+}
+
+#Contenedor{
+  margin-top: 50px;
+}

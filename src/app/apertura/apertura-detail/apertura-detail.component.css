@@ -4,6 +4,22 @@ img{
   max-width: 400px;
 }
 
-h2{
-  font-size: large;
+#NombreApertura{
+  text-align:center;
+  font-size: 50px;
+  margin-top: 15px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img{
+  border-radius: 10px;
+  border-color: midnightblue;
+  border-style: solid;
+}
+
+#Detalle{
+  background-color:skyblue;
+  border-radius: 10px;
+  margin: 25px;
+  font-size: 25px;
 }

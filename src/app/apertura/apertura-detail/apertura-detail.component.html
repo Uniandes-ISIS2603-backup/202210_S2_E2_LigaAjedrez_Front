@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <p class="h2 p-3">{{ aperturaDetail.nombre }}</p>
+  <h2 id="NombreApertura" >{{ aperturaDetail.nombre }}</h2>
   <div class="row">
     <div class="col-3">
       <div class="thumb">
         <img class="img-fluid" src="{{ aperturaDetail.imagen }}" alt="{{ aperturaDetail.nombre }}" />
       </div>
     </div>
-    <div class="col">
+    <div id="Detalle" class="col">
       <dl>
         <dt>Clasificacion</dt>
         <dd>{{ aperturaDetail.clasificacion }}</dd>
