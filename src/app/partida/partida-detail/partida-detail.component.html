@@ -1,7 +1,10 @@
 <div class="container-fluid">
-  <p class="h2 p-3">{{ partidaDetail.id }}</p>
-  <div class="row">
-    <div class="col-3">
+  <div class="row centrado">
+    <p class="h2 p-3">Partida: {{ partidaDetail.id }}</p>
+  </div>
+
+  <div class="row centrado d-flex justify-content-center">
+    <div class="col-sm-12 col-lg-4">
       <div class="thumb">
         <img
           class="card-img-top"
@@ -10,22 +13,24 @@
         />
       </div>
     </div>
-    <div class="col"></div>
-  </div>
-</div>
 
-<div *ngFor="let jugadorDetail of partidaDetail.jugadores" class="col mb-2">
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-body">
-      <div class="col">
-        <div align="center">
-          <img src="{{ jugadorDetail.fotografia }}"width="212" height="212" style="border-radius:50%" alt="{{ jugadorDetail.nombre }}" >
-        </div>
+
+    <div class="col-sm-12 col-lg-7 card-group">
+      <div *ngFor="let jugador of partidaDetail.jugadores">
+        <app-jugador-detail [jugadorDetail]="jugador"></app-jugador-detail>
       </div>
-      <h5 align="center"><br>{{ jugadorDetail.nombre }}</h5>
-      <p align="center">Fecha de Nacimiento: {{ jugadorDetail.fechaNacimiento }}</p>
-      <p align="center">Lugar de Nacimiento: {{ jugadorDetail.lugarNacimiento }}</p>
-      <p align="center">ELO: <strong>{{ jugadorDetail.puntajeElo }}</strong></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <p class="h2 p-3">Comentarios</p>
+  </div>
+  <div class="row centrado">
+    <div class="col">
+      <div *ngFor="let comentario of partidaDetail.comentarios">
+        <app-comentario-partida-detail [comentarioPartidaDetail]="comentario"></app-comentario-partida-detail>
+      </div>
     </div>
   </div>
 </div>
+

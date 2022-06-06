@@ -9,7 +9,7 @@ export class PartidaDetail extends Partida {
 
   jugadas: Array<Jugada>;
   jugadores: Array<Jugador>;
-  comentarioPartida: Array<Comentario>;
+  comentarios: Array<Comentario>;
 
   constructor(
     id: number,
@@ -18,11 +18,11 @@ export class PartidaDetail extends Partida {
     resultado: string,
     jugadas: Array<Jugada>,
     jugadores: Array<Jugador>,
-    comentarioPartida: Array<Comentario>
+    comentarios: Array<Comentario>
     ) {
       super(id, torneo, aperturaRealizada, resultado);
       this.jugadas = jugadas;
       this.jugadores = jugadores;
-      this.comentarioPartida = comentarioPartida;
+      this.comentarios = comentarios;
   }
 }

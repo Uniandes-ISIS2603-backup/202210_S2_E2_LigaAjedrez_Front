@@ -11,6 +11,6 @@ import { ComentarioJugadaDetailComponent } from './comentario-jugada-detail/come
   ],
   declarations: [ComentarioPartidaListComponent, ComentarioPartidaDetailComponent,
                  ComentarioJugadaListComponent, ComentarioJugadaDetailComponent],
-  exports: [ComentarioPartidaListComponent, ComentarioJugadaListComponent]
+  exports: [ComentarioPartidaListComponent, ComentarioJugadaListComponent, ComentarioPartidaDetailComponent]
 })
 export class ComentarioModule { }

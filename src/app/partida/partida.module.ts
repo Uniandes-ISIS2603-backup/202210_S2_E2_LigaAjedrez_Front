@@ -6,9 +6,10 @@ import { PartidaRoutingModule } from './partida-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { JugadorModule } from '../jugador/jugador.module';
+import { ComentarioModule } from '../comentario/comentario.module';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, PartidaRoutingModule, ReactiveFormsModule, JugadorModule],
+  imports: [CommonModule, RouterModule, PartidaRoutingModule, ReactiveFormsModule, JugadorModule, ComentarioModule],
   exports: [PartidaListComponent, PartidaDetailComponent],
   declarations: [PartidaListComponent, PartidaDetailComponent]
 })
