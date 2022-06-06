@@ -1,22 +1,26 @@
+
 <div *ngIf="selected">
   <app-jugador-detail [jugadorDetail]="selectedJugador"></app-jugador-detail>
+</div>
 
-  <div *ngFor="let jugador of jugadores" class="col mb-2">
-    <div
-      class="card p-2"
-      style="width: 15rem; height: 22rem"
-      routerLink="/jugadores/{{ jugador.id }}"
-    >
-      <img
-        class="card-img-top"
-        alt="{{ jugador.id }}"
-        (click)="onSelected(jugador)"
-      />
-      <div class="card-body">
-        <h5 class="card-title">{{ jugador.nombre }}</h5>
-        <p class="card-text">{{ jugador.puntajeElo }}</p>
-        <p class="card-text">{{ jugador.fotografia }}</p>
+<hr />
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let jugador of jugadores" class="col mb-2">
+      <div class="card p-2" style="width: 15rem; height: 22rem">
+        <img
+          class="card-img-top"
+          src="{{ jugador.fotografia }}"
+          alt="{{ jugador.nombre }}"
+          (click)="onSelected(jugador)"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ jugador.nombre }} </h5>
+          <p class="card-text">{{ jugador.lugarNacimiento }}</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+

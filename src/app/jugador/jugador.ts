@@ -1,5 +1,3 @@
-import { Partida } from "../partida/partida";
-
 export class Jugador {
 
   id:number;
